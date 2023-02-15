@@ -9,7 +9,12 @@
         {% for projet in projets %}
             <div class="col-md-4">
                 <div class="card">
-                    <img class="img-fluid card-img-top " src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    {% if projet.brandImage == null %}
+                        <img class="img-fluid card-img-top " src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="avatar"  style="height:250px;">
+                    {% else %}
+                        <img class="img-fluid card-img-top " src="{{ asset('uploads/' ~ projet.brandImage) }}" alt="avatar"  style="height:250px;">
+                    {% endif %}
+                   
                     <div class="card-body">
                         <span class="card-title">
                            {{projet.titre}}
@@ -30,7 +35,7 @@
                 </div>
             </div>
         {% endfor %}
-        <div class="col-md-4">
+        <!--div class="col-md-4">
             <div class="card">
                 <img class="img-fluid card-img-top " src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
                 <div class="card-body">
@@ -189,7 +194,7 @@
                     <span>Lome,Togo</span>
                 </div>
             </div>
-        </div>
+        </div-->
     </div>
     
 </section>

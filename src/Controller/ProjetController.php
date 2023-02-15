@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Entity\Projet;
 use App\Entity\Fichiers;
+use App\Entity\User;
 use App\Form\AddImageType;
+use App\Form\AddMembreType;
 use App\Form\ProjetType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,7 +37,6 @@ class ProjetController extends AbstractController
         $form=$this->createForm(ProjetType::class,$projet);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            //dd($form->get('brandImage'));
             $brandImage=$form->get('brandImage')->getData();
             $resume=$form->get('resume')->getData();
 
@@ -66,13 +67,36 @@ class ProjetController extends AbstractController
             }
             $projet->setChefProjet($this->getUser());
             $projet->setCreatedAt(new \DateTimeImmutable);
-           // $projet->addMembre($this->getUser());
             $doctrine->getManager()->persist($projet);
             $doctrine->getmanager()->flush();
             return $this->redirectToRoute("app_projet");
         }
 
         return $this->renderForm('projet/form.html.twig', [
+            "form"=> $form
+        ]);
+    }
+
+     /**
+     * @Route("/projet/{id}/nouveau-membre",name="add_membre")
+     */
+    public function ajouterMembre(Projet $projet=null,Request $request,ManagerRegistry $doctrine):Response
+    {
+        if($projet ==null){
+            return $this->redirectToRoute("app_projet");
+        }
+        $form=$this->createForm(AddMembreType::class);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            //dd($form->get('membre')->getData());
+            $user=$doctrine->getRepository(User::class)->find($form->get('membre')->getData());
+            //dd($user);
+            $projet->addMembre($user);
+            $doctrine->getManager()->persist($projet);
+            $doctrine->getmanager()->flush();
+            return $this->redirectToRoute("details_projet",["id"=>$projet->getId()]);
+        }
+        return $this->renderForm('projet/addMembre.html.twig', [
             "form"=> $form
         ]);
     }
@@ -88,7 +112,6 @@ class ProjetController extends AbstractController
         $form=$this->createForm(AddImageType::class);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            //dd($form->get('images'));
             $elts = $form->get('images')->getData();
             if($elts){
                 foreach($elts as $elt){

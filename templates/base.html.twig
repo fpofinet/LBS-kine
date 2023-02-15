@@ -34,7 +34,7 @@
                     </li>
                     {% if app.user %}
                         <a href="{{path("app_logout")}}" class="text-white btn">Deconnexion</a>
-                        <a href="#" class="text-white btn ">Mon Compte</a>
+                        <a href="{{path("app_user")}}" class="text-white btn ">Mon Compte</a>
                     {% else %}
                         <li class="nav-item">
                             <a href="{{path("app_login")}}" class="text-white btn">S'identifier</a> |
