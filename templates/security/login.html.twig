@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body class="d-flex flex-column h-100">
+    <section class="bg-dark mb-5  px-5" style="height:90px">
+        <div class="container text-center text-white">
+            <p class="display-2 fw-bold">PROJET SEIC</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-5 mx-auto">
+                <form method="post" class="border shadow rounded-3">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    <div class="bg-dark text-white text-center rounded-top">
+                        <h1 class="h3 mb-3 font-weight-normal">Connectez Vous</h1>
+                    </div>
+                    <div class="p-3">
+                        {% if app.user %}
+                            <div class="mb-3">
+                                Vous êtes connecter en tant que {{ app.user.nom }} {{ app.user.prenom }}, <a href="{{ path('app_logout') }}">Deconnexion</a>
+                            </div>
+                        {% endif %}
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Mot de passe</label>
+                            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                        </div>
+                        
+                        <input type="hidden" name="_csrf_token"
+                            value="{{ csrf_token('authenticate') }}"
+                        >
+                        <div class="form-group">
+                            <button class="btn btn-primary mt-2" type="submit">
+                                Connexion
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </section>  
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container">
+            <span class="text-light">Place sticky footer content here.</span>
+        </div>
+    </footer>
+</body>
+</html>

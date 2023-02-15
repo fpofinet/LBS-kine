@@ -1,0 +1,19 @@
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}images projets{% endblock %}
+{% block body %}
+<section class="row mb-5" >
+    <div class="col-lg-6 mx-auto shadow rounded p-2 pb-5">
+        <div class="container-fluid rounded p-0">
+            <p class="bg-dark text-light text-center h3 rounded-top" style="height:35px;">Ajoutez quelques images pour illustrer votre projet</p>
+            <div class="">
+                {{form_start(form)}}
+                    {{form_widget(form)}}
+                    <button class="btn btn-primary">Ajouter</button>
+                {{form_end(form)}}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

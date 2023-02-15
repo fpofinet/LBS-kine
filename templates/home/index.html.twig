@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<section class="container">
+    <div class="text-center pb-5">
+        <span class="h1 fw-bold">comment ca marche?</span>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <span class="h3"> Créez un compte</span>
+            <div class="d-flex mt-3">
+                <p>
+                    Créez un compte gratuitement pour avoir accès à toutes nos opportunités d'investissement.
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <span class="h3">Soutenez un projet</span>
+            <div class="d-flex  mt-3">
+                <p>
+                    Découvrez la sélection de projet de nos jeûnes et soutenez ceux qui vous intéressent.
+                </p>  
+                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+            </div>  
+        </div>
+        <div class="col-md-4">
+            <span class="h3">Suivi et reporting</span>
+            <div class="d-flex mt-3">
+                <p>
+                    Suivez l’évolution des projets à travers des rapports d’activités périodiques.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class=" pb-5">
+        <p class="text-info h5">Decouvrez les projets de nos jeûnes</p>
+        <p class="h1 fw-bold">Notre selection de projet</p>
+
+        <a href="{{path("app_projet")}}" class="btn btn-info float-end">Tous les projets</a>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="img-fluid card-img-top " src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                <div class="card-body">
+                    <span class="card-title">
+                        Vimiella
+                    </span>
+                    <p class="card-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis blanditiis quia, rem dolores aspernatur 
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    <span>Lome,Togo</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="img-fluid card-img-top " src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                <div class="card-body">
+                    <span class="card-title">
+                        Vimiella
+                    </span>
+                    <p class="card-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis blanditiis quia, rem dolores aspernatur 
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    <span>Lome,Togo</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="img-fluid card-img-top " src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                <div class="card-body">
+                    <span class="card-title">
+                        Vimiella
+                    </span>
+                    <p class="card-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis blanditiis quia, rem dolores aspernatur 
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    <span>Lome,Togo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container my-5 px-5">
+    <div class="mx-5 bg-dark text-white d-flex px-5 justify-content-around">
+        <div class="d-flex flex-column mx-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+            </svg>
+            <span class="h1 fw-bold"> 150 </span>
+            <span>Membres</span>
+        </div>
+        <div class="d-flex flex-column mx-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+            </svg>
+            <span class="h1 fw-bold"> 26 </span>
+            <span>Projets</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

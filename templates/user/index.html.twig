@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<section class="container">
+    <div class="container row g-4">
+        <div class="">
+            <a href="{{path("new_projet")}}" class="btn btn-success">Creer un projet</a>
+        </div>
+        {% for projet in projets %}
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> {{projet.titre}}</span> <br>
+                            <span> Description : {{projet.description}}</span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="{{path("details_projet",{id: projet.id})}}" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> eneka</span> <br>
+                            <span> Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="#" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> eneka</span> <br>
+                            <span> Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="#" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> eneka</span> <br>
+                            <span> Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="#" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> eneka</span> <br>
+                            <span> Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="#" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> eneka</span> <br>
+                            <span> Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="#" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> eneka</span> <br>
+                            <span> Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="#" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="img-fluid card-img-top" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"  style="height:250px;">
+                    <div class="card-body">
+                        <p>
+                            <span class="fw-bold h4"> eneka</span> <br>
+                            <span> Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </span> <br>
+                            <span> Demande financement : 500.000 Fcfa </span> <br>
+                        </p>
+                        <a href="#" class="btn btn-info"> Details </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <p class="fw-bold">
+        
+    </p>
+</section>
+{% endblock %}
